@@ -6,15 +6,15 @@ const searchString = "https://epok.buenosaires.gob.ar/buscar?texto=chicos&clase=
 let placesList;
 
 router.get('/', async (req, res) => {
-try {
-  getPlaces(searchString).then(data => {
-    placesList = data;
-    res.status(200).json(placesList.instancias);
-    //placesList.instancias.forEach(el => {
-  });  
-} catch(err) {
-  res.status(500).json({ message: err });
-}
+  try {
+    getPlaces(searchString).then(data => {
+      placesList = data;
+      res.status(200).json(placesList.instancias);
+      //placesList.instancias.forEach(el => {
+    });  
+  } catch(err) {
+    res.status(500).json({ message: err });
+  }
 });
 
 async function getPlaces(string) {
@@ -26,7 +26,5 @@ async function getPlaces(string) {
     return err;
   }
 }
-
-
 
 module.exports = router;

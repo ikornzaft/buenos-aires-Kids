@@ -1,0 +1,17 @@
+<div class="places__container">
+  Lugares
+  <% places.forEach(el => { %>
+    <% let placeType = "generic"%>
+    <% if (el.nombre.toLowerCase().includes('museo')) placeType = "museo" %>
+    <% if (el.nombre.toLowerCase().includes('plaza') || el.nombre.toLowerCase().includes('parque') || el.nombre.toLowerCase().includes('jardín')) placeType="parque" %>
+    <% if (el.nombre.toLowerCase().includes('teatro')) placeType = "teatro" %>
+    <div class="<%= placeType %>">
+      <div class="name">
+        <p><%= el.nombre %></p>
+      </div>
+      <div class="place__img">
+        <p><%= placeType %></p>
+      </div>
+    </div>
+  <% }) %>
+</div>

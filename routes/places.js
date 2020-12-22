@@ -8,8 +8,12 @@ let placesList;
 router.get('/', async (req, res) => {
   try {
     getPlaces(searchString).then(data => {
-      placesList = data;
-      res.status(200).json(placesList.instancias);
+      //placesList = data;
+      console.log(data);
+      res.render('places', {
+        places: data.instancias
+      });
+      //res.status(200).json(placesList.instancias);
       //placesList.instancias.forEach(el => {
     });  
   } catch(err) {

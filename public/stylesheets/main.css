@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
+
 }
 
 body {
   background-color: #ffffff;
-  background-image: url('/images/Pattern-Randomized.svg');
+  background-image: url("/images/Pattern-Randomized.svg");
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -34,13 +35,12 @@ body {
   grid-template-columns: repeat(auto-fill, 20rem);
   grid-auto-rows: 10rem;
   grid-gap: 20px;
-  
 }
 
 .card {
   padding: 1rem;
   border-radius: 10px;
-  background-color: #a95ff8;
+  background-color: #a355f7;
   font-weight: 500;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
@@ -51,11 +51,11 @@ body {
   height: 4.5rem;
   margin-right: 1.7rem;
   border-radius: 50%;
-  background-color: #be89f7;
+  background-color: #b47bf0;
 }
 
 .place__img-file {
-  position: absolute; 
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -70,19 +70,19 @@ body {
 }
 
 .card.museo {
-  background-color: #f856f8;
+  background-color: #da54da;
 }
 
 .card.museo .card__content .place__img {
-  background-color: #fc91fc;
+  background-color: #ec70ec;
 }
 
 .card.parque {
-  background-color: #4cda5f;
+  background-color: #42c554;
 }
 
 .card.parque .card__content .place__img {
-  background-color: #7fee8d;
+  background-color: #62df73;
 }
 
 .card.teatro {
@@ -91,4 +91,25 @@ body {
 
 .card.teatro .card__content .place__img {
   background-color: #e2d25c;
+}
+
+.card__footer {
+  position: relative;
+  margin-top: 1.3rem;
+}
+
+.card__btn {
+  position: relative;
+  left: 12rem;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background: none;
+  padding: 0.3rem 0.8rem;
+  font-weight: 100;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card__btn:hover {
+  background-color: #ec70ec;
 }

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: url('/images/Pattern-Randomized.svg');
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.places__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.cards__grid {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(auto-fill, 20rem);
+  grid-auto-rows: 10rem;
+  grid-gap: 20px;
+  
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #a95ff8;
+  font-weight: 500;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.place__img {
+  position: relative;
+  min-width: 4.5rem;
+  height: 4.5rem;
+  margin-right: 1.7rem;
+  border-radius: 50%;
+  background-color: #be89f7;
+}
+
+.place__img-file {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+}
+
+.card__content {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.card.museo {
+  background-color: #f856f8;
+}
+
+.card.museo .card__content .place__img {
+  background-color: #fc91fc;
+}
+
+.card.parque {
+  background-color: #4cda5f;
+}
+
+.card.parque .card__content .place__img {
+  background-color: #7fee8d;
+}
+
+.card.teatro {
+  background-color: #ccbb39;
+}
+
+.card.teatro .card__content .place__img {
+  background-color: #e2d25c;
+}
